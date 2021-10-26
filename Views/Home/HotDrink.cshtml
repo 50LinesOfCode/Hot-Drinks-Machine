@@ -1,0 +1,18 @@
+﻿@model HotDrink
+@{
+    ViewData["Title"] = Model.DrinkName();
+}
+
+<div class="text-center">
+
+
+    <ul class="list-group">
+
+        @foreach (var step in Model.PrepareDrink())
+        {
+            <li class="list-group-item">@step</li>
+        }
+    </ul>
+
+    
+</div>

@@ -1,8 +1,12 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Hot Drinks Machine";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Please select your hot drink</h1>
+    <div class="row">
+        <a class="col-4  btn btn-block" asp-area="" asp-controller="Home" asp-action="HotDrink" asp-all-route-data="@(new Dictionary<string, string> { { "drink", "lemontea" } })">Lemon Tea</a>
+        <a class="col-4  btn btn-block" asp-area="" asp-controller="Home" asp-action="HotDrink" asp-all-route-data="@(new Dictionary<string, string> { { "drink", "coffee" } })">Coffee</a>
+        <a class="col-4  btn btn-block" asp-area="" asp-controller="Home" asp-action="HotDrink" asp-all-route-data="@(new Dictionary<string, string> { { "drink", "chocolate" } })">Chocolate</a>
+    </div>
 </div>
